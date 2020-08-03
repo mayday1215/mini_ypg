@@ -1,0 +1,52 @@
+/* pages/home/home.wxss */
+/* .swiper{
+  width: 750rpx;
+  height: 340rpx;
+} */
+.main{
+  margin-top: 90rpx;
+}
+.swiper image{
+  width: 100%;
+   
+}
+.catitem{ 
+  display: flex;
+}
+.catitem navigator{
+  flex: 1;
+  padding: 20rpx;
+}
+.catitem navigator image{
+  width: 100%;
+  height: 100%;
+}
+
+.floor_list .floor_item{
+  /* border: 10rpx solid #fff; */
+  margin: 10rpx 0;
+}
+.floor_list .floor_item .titleImg{
+  width: 100%;
+}
+
+.item_content navigator{
+  width: 33.33vw;
+  float: left;
+}
+.item_content navigator image{
+  width: 100%;
+  height: 100%;
+}
+.item_content navigator:nth-last-child(-n+4){
+  height: 208.647rpx;
+  border: 4rpx solid #fff;
+}
+.clear::after{
+  content: "";
+  display: flex;
+  clear: both;
+}
+
+
+

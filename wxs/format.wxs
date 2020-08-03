@@ -1,0 +1,10 @@
+function formatPrice(price){
+  if(price === undefined){
+    return
+  }
+  return '￥' + price.toFixed(2)
+}
+
+module.exports = {
+  formatPrice:formatPrice,
+}

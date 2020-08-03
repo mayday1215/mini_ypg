@@ -1,10 +1,18 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+@import "./assets/styles/iconfonts.wxss";
+
+page,view,text,swiper,swiper-item,image,navigator {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-} 
+}
+image{
+  vertical-align: bottom;
+}
+.fixed{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}

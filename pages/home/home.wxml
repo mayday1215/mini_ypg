@@ -1,0 +1,31 @@
+<!--pages/home/home.wxml-->
+<!-- 搜索 -->
+<SearchInput class="fixed" />
+<view class="main">
+	<!-- 轮播图 -->
+	<swiper indicator-dots indicator-active-color="#fff" autoplay interval="2000" class="swiper" circular>
+		<swiper-item class="swiper" wx:for="{{swiperList}}" wx:key="goods_id">
+			<navigator url="{{item.navigator_url}}">
+				<image mode="widthFix" src="{{item.image_src}}"></image>
+			</navigator>
+		</swiper-item>
+	</swiper>
+	<!-- 导航 -->
+	<view class="catitem">
+		<navigator url="{{item.navigator_url}}" wx:for="{{catitemList}}" wx:key="name">
+			<image mode="widthFix" src="{{item.image_src}}"></image>
+		</navigator>
+	</view>
+
+	<!-- 楼层 -->
+	<view class="floor_list">
+		<view class="floor_item" wx:for="{{floorList}}" wx:key="name">
+			<image mode="widthFix" class="titleImg" mode="widthFix" src="{{item.floor_title.image_src}}"></image>
+			<view class="item_content clear">
+				<navigator url="{{citem.navigator_url}}" wx:for="{{item.product_list}}" wx:for-item="citem" wx:key="name" wx:for-index="cindex">
+					<image src="{{citem.image_src}}" mode="{{cindex===0 ? 'widthFix' : 'scaleToFill'}}"></image>
+				</navigator>
+			</view>
+		</view>
+	</view>
+</view>

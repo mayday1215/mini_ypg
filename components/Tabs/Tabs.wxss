@@ -1,0 +1,18 @@
+/* components/Tabs/Tabs.wxss */
+.tabs{
+  display: flex;
+  border-bottom: 2rpx solid #ddd;
+  background-color: #fff;
+  height: 80rpx;
+}
+.tabs .item{
+  display: flex;
+  flex: 1;
+  padding: 15rpx 0;
+  justify-content: center;
+  align-items: center;
+  
+}
+.active{
+  border-bottom: 3rpx solid #eb4450;
+}

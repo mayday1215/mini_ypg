@@ -1,0 +1,100 @@
+/* pages/detail/detail.wxss */
+page{
+  padding: 0 10rpx ;
+}
+.swiper .item {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper image{
+  width: 50%;
+}
+
+.goods_info{
+  /* border-top: 10rpx solid #ccc;
+  border-bottom: 10rpx solid #ccc; */
+}
+.goods_info .price{
+  color: #eb4450;
+  font-weight: 600;
+  padding: 10rpx;
+}
+.goods_info .row{
+  display: flex;
+  border-top: 5rpx solid #dedede;
+  border-bottom: 5rpx solid #dedede;
+  padding: 10rpx;
+}
+.goods_info .name{
+  font-size: 34rpx;
+  color: #666;
+  flex: 5;
+  
+}
+.goods_info .like{
+  text-align: center;
+  flex: 1;
+  border-left: 4rpx solid #666;
+}
+.goods_info .like .iconfont{
+  font-size: 40rpx;
+}
+.goods_info .like .likeText{
+  font-size: 26rpx;
+}
+
+
+.goods_detail{
+  margin-bottom: 100rpx;
+}
+.goods_detail .title{
+  font-weight: bold;
+  color: #eb4450;
+  padding: 20rpx 0;
+  text-align: center;
+  
+}
+
+.btm_tool{
+  height: 100rpx;
+  background-color: #fff;
+  box-shadow: 0 -4rpx 6rpx  rgba(0,0,0,.2);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+.btm_tool .item{
+  flex: 1;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.btm_tool .item  button{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.btm_tool .add,
+.btm_tool .pay{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 34rpx;
+}
+.btm_tool .add{
+  background-color: #ffa500;
+}
+.btm_tool .pay{
+  background-color: #eb4450;
+}

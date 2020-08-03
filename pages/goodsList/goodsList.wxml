@@ -1,0 +1,31 @@
+<!--pages/goodsList/goodsList.wxml-->
+<wxs src="../../wxs/format.wxs" module="mat"/>
+<view>
+<view class="fixed">
+  <SearchInput />
+  <Tabs title="{{['综合','销量','价格']}}" bindchange="change" ></Tabs>
+</view>
+<view class="main">
+<!--  wx:if="{{type === 'compre'}}" -->
+  <view class="goods" wx:if="{{type === 'compre'}}">
+		<view class="goods_item" bindtap="itemClick" data-goods_id="{{item.goods_id}}"  wx:for="{{goodsList}}" wx:key="goods_id">
+			<view class="goods_img_wrap">
+				<image mode="widthFix" src="{{item.goods_small_logo || 'data:image/jpeg;base64,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'}}"></image>
+			</view>
+			<view class="goods_info_wrap">
+				<view class="goods_name">{{item.goods_name}}</view>
+				<view class="goods_price">{{mat.formatPrice(item.goods_price)}}</view>
+			</view>
+		</view>
+	</view>
+
+
+
+
+
+
+	<view wx:elif="{{type === 'sales'}}">销量</view>
+	<view wx:elif="{{type === 'price'}}">价格</view>
+</view>
+
+</view>

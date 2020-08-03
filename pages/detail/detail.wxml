@@ -1,0 +1,52 @@
+<!--pages/detail/detail.wxml-->
+<wxs src="../../wxs/format.wxs" module="mat"/>
+<!-- 轮播图 -->
+ <swiper class="swiper" indicator-dots indicator-active-color="#000" autoplay interval="2000" circular>
+    <swiper-item bindtap="swiperItemClick" data-index="{{index}}" class="item" wx:for="{{goodsDetail.pics}}" wx:key="pics_id">
+      <image mode="widthFix" src="{{item.pics_mid}}"></image>
+    </swiper-item>
+  </swiper>
+<!-- 描述 -->
+<view class="goods_info">
+  <view class="price">{{mat.formatPrice(goodsDetail.goods_price)}}</view>
+  <view class="row">
+    <view class="name">{{goodsDetail.goods_name}}</view>
+    <view class="like">
+      <text class="iconfont icon-shoucang"></text>
+      <view class="likeText">收藏</view>
+    </view>
+  </view>
+</view>
+
+<view class="goods_detail">
+  <view class="title">- 图文详情 -</view>
+  <view class="conten">
+    <rich-text nodes="{{goodsDetail.goods_introduce}}"></rich-text>
+  </view>
+</view>
+
+
+<view class="btm_tool">
+  <view class="item" bindtap="">
+    <view class="iconfont icon-kefu"></view>
+    <text>联系客服</text>
+    <button open-type="contact"></button>
+  </view>
+  <view class="item">
+    <view class="iconfont icon-fenxiang"></view>
+    <text>分享</text>
+    <button open-type="share"></button>
+  </view>
+  <view class="item" bindtap="toCart">
+    <view class="iconfont icon-gouwuche"></view>
+    <text>购物车</text>
+  </view>
+  <view class="add" bindtap="addCart">加入购物车</view>
+  <view class="pay">立即购买</view>
+
+
+</view>
+
+
+
+
